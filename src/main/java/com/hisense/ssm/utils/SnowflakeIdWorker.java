@@ -1,8 +1,5 @@
-package com.hisense.ssm.utils; /**
- * @Author: Huang.bingzhi
- * @Date: 2019/5/9 6:35
- * @Version 1.0
- */
+package com.hisense.ssm.utils;
+
 /**
  * Twitter_Snowflake<br>
  * SnowFlake的结构如下(每部分用-分开):<br>
@@ -120,7 +117,7 @@ public class SnowflakeIdWorker {
      * @param lastTimestamp 上次生成ID的时间截
      * @return 当前时间戳
      */
-    protected long tilNextMillis(long lastTimestamp) {
+    private long tilNextMillis(long lastTimestamp) {
         long timestamp = timeGen();
         while (timestamp <= lastTimestamp) {
             timestamp = timeGen();
@@ -132,7 +129,7 @@ public class SnowflakeIdWorker {
      * 返回以毫秒为单位的当前时间
      * @return 当前时间(毫秒)
      */
-    protected long timeGen() {
+    private long timeGen() {
         return System.currentTimeMillis();
     }
 
