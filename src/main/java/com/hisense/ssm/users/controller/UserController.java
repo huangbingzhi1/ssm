@@ -18,6 +18,7 @@ import java.util.List;
 public class UserController {
     @Autowired
     private BaseUserMapper baseUserMapper;
+
     @RequestMapping("getAllUsers")
     public List<BaseUser> getAllUsers(){
         List<BaseUser> baseUsers = baseUserMapper.selectAll();
