@@ -2,6 +2,9 @@ package com.hisense.ssm.users.entity;
 
 import java.io.Serializable;
 
+/**
+ * 用户表
+ */
 public class BaseUser implements Serializable {
     private String uid;
 
